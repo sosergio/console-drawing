@@ -1,0 +1,28 @@
+{
+  "name": "console-drawing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npm run build && jest",
+    "build": "rimraf dist/ && babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node dist/index.js",
+    "lint": " ./node_modules/.bin/eslint src/main/**"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "draw": "src/index.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-google": "^0.11.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.6.0",
+    "rimraf": "^2.6.2"
+  }
+}
